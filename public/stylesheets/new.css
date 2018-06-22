@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+.section2 p{
+    font-family: ‘Noto Sans TC’, sans-serif;
+    padding-right: 10%; 
+    font-weight: 300;
+}
+.section2 p1{
+    font-size: 16px; 
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+    width:460px;
+    height:20px;
+    outline : none;      /* 避免點選會有藍線或虛線 */
+    background:orange;
+    border-radius: 25px;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+        width:22px;
+        height:22px;
+        background:#f22;
+        border-radius:50%;
+        transition:.2s;        /* 點選放大時候的漸變時間 */
+      }
+      
+    input[type="range"]::-webkit-slider-thumb:hover{
+        width:16px;
+        height:16px;
+    }
+    
+.aa-selector input,.bb-selector input,.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+            
+}
+.eye1{background-image:url(../images/eye/35924118_2021280477914066_815262707782516736_n.png);}
+.eye2{background-image:url(../images/eye/35924118_2021280477914066_815262707782516736_n.png);}
+.eye3{background-image:url(../images/eye/35924118_2021280477914066_815262707782516736_n.png);}
+.eye4{background-image:url(../images/eye/35924118_2021280477914066_815262707782516736_n.png);}
+.eye5{background-image:url(../images/eye/35924118_2021280477914066_815262707782516736_n.png);}
+.eye6{background-image:url(../images/eye/35924118_2021280477914066_815262707782516736_n.png);}
+
+.nose1{background-image:url(../images/dna-icon.png);}
+.nose2{background-image:url(../images/dna-icon.png);}
+.nose3{background-image:url(../images/dna-icon.png);}
+.nose4{background-image:url(../images/dna-icon.png);}
+.nose5{background-image:url(../images/dna-icon.png);}
+.nose6{background-image:url(../images/dna-icon.png);}
+
+.mouth1{background-image:url(../images/mouth/35821809_2021316477910466_8777515416047058944_n.png);}
+.mouth2{background-image:url(../images/mouth/35821809_2021316477910466_8777515416047058944_n_meitu_1.png);}
+.mouth3{background-image:url(../images/dna-icon.png);}
+.mouth4{background-image:url(../images/dna-icon.png);}
+.mouth5{background-image:url(../images/dna-icon.png);}
+.mouth6{background-image:url(../images/dna-icon.png);}
+
+.aa-selector input:active +.drinkcard-aa{opacity: .9;}
+.aa-selector input:checked +.drinkcard-aa{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.bb-selector input:active +.drinkcard-bb{opacity: .9;}
+.bb-selector input:checked +.drinkcard-bb{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.drinkcard-aa, .drinkcard-bb, .drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:100px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.2) grayscale(1) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(1) opacity(.9);
+            filter: brightness(1.2) grayscale(1) opacity(.9);
+}
+.drinkcard-aa:hover,.drinkcard-bb:hover,.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <style>
+      table, th, td {
+          border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Result</h1>
+    <table>
+      <tr>
+        <% for (var i = 0; i < head.length; i++) { %>
+          <th><%= head[i] %></th>
+        <% } %>
+      </tr>
+      <% for (var i = 0; i < data.length; i++) { %>
+      <tr>
+        <td><%= data[i].id %></td>
+        <td><%= data[i].cost %></td>
+        <td><%= data[i].eyeRange %></td>
+        <td><%= data[i].earRange %></td>
+        <td><%= data[i].noseRange %></td>
+        <td><%= data[i].mouthRange %></td>
+        <td><%= data[i].heightRange %></td>
+        <td><%= data[i].kid %></td>
+        <td><%= data[i].height %></td>
+        <td><%= data[i].faceaa %></td>
+        <td><%= data[i].facebb %></td>
+        <td><%= data[i].facecc %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>

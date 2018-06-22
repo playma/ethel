@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage整頁垂直導航跳頁動畫js</title>
+<link rel="stylesheet" type="text/css" href="./stylesheets/jquery.fullPage.css" />
+<link href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display" rel="stylesheet">
+<link href="./stylesheets/index.1.css" rel="stylesheet" type="text/css">
+
+<link href="./stylesheets/new.css" rel="stylesheet" type="text/css">
+<style>
+.section { text-align: center; font: "Microsoft Yahei"; color: #fff;}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.fullPage.js"></script>
+<script>
+$(function(){  
+	$('#dowebok').fullpage({
+        'anchors': true,
+		sectionsColor: ['#c4e1e1', ' #8dc1b2', '#e0e0e0', '#d36b8e', '#c4e1e1'],
+		'navigation': true,
+        normalScrollElements: '.modal',
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div id="dowebok">
+    <form method="POST" id="myForm">
+	<div class="section section1">
+        <div class="box">
+            <div class="Q1">
+                <p>1.假設您今天沒有經濟壓力，那麼您會願意花多少錢為孩子進行外觀上的基因重組 ？
+                </p>
+                    <label for="cost">
+                    <input type="number" min="0" id="cost" placeholder="Please Enter The Amount of Money" name="cost" required >
+                    </label>
+            </div>
+            <div class="Q2">
+                    <p>2.如果你可以決定你未來小孩的樣貌，你會如何選擇 ? <p1>(數字越大代表越重視，共有30點，可以在額度內自由分配)</p1></p>
+                <div class="slidecontainer">
+                    <div class="div-inline">
+                        <br>
+                        <span> eyes</span>
+                        <p><input type="range" orient="vertical"  min="0" max="30" value="0" class="sliders" id="eyeRange" name="eyeRange">
+                        <span id="eyevalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span> ears </span>
+                        <p><input type="range" orient="vertical" min="0" max="30" value="0" class="sliders" id="earRange" name="earRange">
+                        <span id="earvalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span> nose  </span>
+                        <p><input type="range" orient="vertical" min="0" max="30" value="0" class="sliders" id="noseRange" name="noseRange">
+                         <span id="nosevalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span>mouth     </span>
+                        <p><input type="range" orient="vertical"  min="0" max="30" value="0" class="slider" id="mouthRange" name="mouthRange">
+                        <span id="mouthvalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span>height </span>
+                        <p><input type="range" orient="vertical" min="0" max="30" value="0" class="slider" id="heightRange", name="heightRange">
+                        <span id="heightvalue"></span></p>
+                    </div>
+                    <button type="button" class="gobelow" id="p1">NEXT</button>
+                </div>           
+            </div>
+        
+    </div>
+    </div>
+	<div class="section section2">
+        <p>3.在你心目中，甚麼是美?<p1>&nbsp;&nbsp;&nbsp;麻煩您從下列圖片中選出您希望以後小孩的面貌以及特色。</p1></p>
+            <label class="kidgender">GENDER~ :     <input type="radio" name="kid" value="boy"> I want a BOY
+            </input></label>
+            <label class="kidgender"><input type="radio" name="kid" value="girl"> I want a GIRL
+            </input></label>
+            <label class="kidgender"><input type="radio" name="kid" value="all"> It's all good
+            </input></label>
+        <br>
+        
+            <label class="bar">height (cm) :  
+            <input type="range" min="0" max="300" step="1" value="0" class="barinner" id="heightID" name="height">
+            <span id="heiCM"></span></label>
+        <br><br>
+        <div class="aa-selector"><label>＊EYES＊
+                <input id="eye1" type="radio" name="faceaa" value="1" />  
+                <label class="drinkcard-aa eye1" for="eye1"></label>
+                <input id="eye2" type="radio" name="faceaa" value="2" />
+                <label class="drinkcard-aa eye2"for="eye2"></label>
+                <input id="eye3" type="radio" name="faceaa" value="3" />  
+                <label class="drinkcard-aa eye3" for="eye3"></label>
+                <input id="eye4" type="radio" name="faceaa" value="4" />
+                <label class="drinkcard-aa eye4"for="eye4"></label>
+                <input id="eye5" type="radio" name="faceaa" value="5" />  
+                <label class="drinkcard-aa eye5" for="eye5"></label>
+                <input id="eye6" type="radio" name="faceaa" value="6" />
+                <label class="drinkcard-aa eye6"for="eye6"></label>
+        </label></div>
+        <div class="bb-selector"><label>＊NOSE＊
+                <input id="nose1" type="radio" name="facebb" value="1"/>  
+                <label class="drinkcard-bb nose1" for="nose1"></label>
+                <input id="nose2" type="radio" name="facebb" value="2"/>  
+                <label class="drinkcard-bb nose2" for="nose2"></label>
+                <input id="nose3" type="radio" name="facebb" value="3"/>  
+                <label class="drinkcard-bb nose3" for="nose3"></label>
+                <input id="nose4" type="radio" name="facebb" value="4"/>  
+                <label class="drinkcard-bb nose4" for="nose4"></label>
+                <input id="nose5" type="radio" name="facebb" value="5"/>  
+                <label class="drinkcard-bb nose5" for="nose5"></label>
+                <input id="nose6" type="radio" name="facebb" value="6"/>  
+                <label class="drinkcard-bb nose6" for="nose6"></label> 
+        </label></div>
+        <div class="cc-selector"><label>＊MOUTH＊
+                <input id="mouth1" type="radio" name="facecc" value="1"/>  
+                <label class="drinkcard-cc mouth1" for="mouth1"></label>
+                <input id="mouth2" type="radio" name="facecc" value="2"/>  
+                <label class="drinkcard-cc mouth2" for="mouth2"></label>
+                <input id="mouth3" type="radio" name="facecc" value="3"/>  
+                <label class="drinkcard-cc mouth3" for="mouth3"></label>
+                <input id="mouth4" type="radio" name="facecc" value="4"/>  
+                <label class="drinkcard-cc mouth4" for="mouth4"></label>
+                <input id="mouth5" type="radio" name="facecc" value="5"/>  
+                <label class="drinkcard-cc mouth5" for="mouth5"></label>
+                <input id="mouth6" type="radio" name="facecc" value="6"/>  
+                <label class="drinkcard-cc mouth6" for="mouth6"></label> 
+        </label></div>
+    
+        <button class="save" type="submit">SAVE</button>
+    </div>
+</form>
+	<div class="section section3">
+		<h3>RESULT</h3>
+		<p>clusters of regularly interspaced 
+                <br>short palindromic repeats</p>
+	</div>
+	<div class="section section4">
+		<h3>第四頁</h3>
+		<p>dffbgvcnbn</p>
+	</div>
+    <div class="section section5">
+		<h3>第五頁</h3>
+		<p>sdfdf</p>
+	</div>
+</div>
+
+<script>
+    var barinner = document.getElementById("heightID");
+    var heightidoutput = document.getElementById("heiCM");
+    heightidoutput.innerHTML = barinner.value;
+    barinner.oninput = function() {
+        heightidoutput.innerHTML = this.value;
+    }
+
+    $('#p1').click(function(){
+        $.fn.fullpage.moveSectionDown();
+    })
+
+    document.getElementById("myForm").addEventListener("submit", myFunction);
+
+    function myFunction(e) {
+        e.preventDefault();
+        var form_data = $('form').serialize()
+        console.log(form_data)
+        $.post("./postForm1", form_data, function(data) {
+            alert( "Data Loaded: " + data );
+        });
+        alert('ok')
+        //window.location = 'http://www.google.com.tw'   
+    }
+
+</script>
+<script src="./javascripts/table.js"></script>
+
+</body>
+</html>
